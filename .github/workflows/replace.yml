@@ -1,0 +1,22 @@
+name: Replace index with space
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace index.html
+        run: |
+          if [ -f space.html ]; then
+            git config user.name "koyama-teppei"
+            git config user.email "koyamateppei8@gmail.com"
+            if [ -f index.html ]; then
+              git rm -q index.html
+            fi
+            git mv space.html index.html
+            git commit -m "Replace index.html with updated SEO version"
+            git push
+          fi
