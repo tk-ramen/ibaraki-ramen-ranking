@@ -196,7 +196,15 @@
   .qa h3{margin:0 0 4px;font-size:16px}
   .qa h3::before{content:"Q. ";color:var(--red);font-weight:900}
   .qa p{margin:0;color:var(--ink2);font-size:14.5px}
-  footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--ink3)}
+  /* affiliate (prep) */
+.pr-badge{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#8a8f98;border-radius:4px;padding:2px 7px;vertical-align:middle;margin-left:8px;letter-spacing:.05em}
+.aff-grid{display:grid;gap:14px;margin-top:12px}
+@media(min-width:640px){.aff-grid{grid-template-columns:1fr 1fr}}
+.aff-slot{border:1.5px dashed #c9cdd4;border-radius:10px;padding:16px;background:#fafbfc}
+.aff-slot h3{margin:0 0 6px;font-size:15px}
+.aff-slot p{margin:0;font-size:13px;color:var(--ink2)}
+.aff-note{font-size:12px;color:var(--ink3);margin-top:10px}
+footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--ink3)}
   footer ul{padding-left:1.2em}
   @media (max-width:560px){
     .card{grid-template-columns:64px 1fr}
@@ -288,7 +296,27 @@
     </div>
   </section>
 
-  <section class="block" id="genre">
+  <section class="block" id="ouchi">
+<h2>おうちで味わう有名店の一杯<span class="pr-badge">広告・PR</span></h2>
+<p>県北まで足を運べない日は、お取り寄せの冷凍ラーメンという選択肢も。有名店の味を自宅で楽しめるサービスを紹介します。</p>
+<div class="aff-grid">
+<!-- AFFILIATE SLOT A: A8.net takumen ad code replaces inner content of aff-slot-a -->
+<div class="aff-slot" id="aff-slot-a">
+<h3>有名店のお取り寄せ(準備中)</h3>
+<p>行列店のラーメン・つけ麺のお取り寄せサービスを準備中です。</p>
+</div>
+<!-- AFFILIATE SLOT B: moshimo kantan-link code replaces inner content of aff-slot-b -->
+<div class="aff-slot" id="aff-slot-b" style="text-align:center">
+<h3 style="text-align:left">楽天市場</h3>
+<p style="text-align:left;margin-bottom:10px">冷凍ラーメンや餃子のお取り寄せは楽天市場でも探せます。</p>
+<a href="https://rpx.a8.net/svt/ejp?a8mat=4BESU6+41V7ZM+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26103176643_4BESU6_41V7ZM_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow">
+<img src="http://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/" border="0"></a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BESU6+41V7ZM+2HOM+656YP" alt="">
+</div>
+</div>
+<p class="aff-note">※このセクションはアフィリエイト広告です。リンク先で商品を購入されると、サイト運営者に紹介料が支払われる場合があります(購入される方の負担は増えません)。</p>
+</section>
+<section class="block" id="genre">
     <h2>ジャンルで選ぶ県北の一杯</h2>
     <p>順位とは別に、「今日はこの味」という選び方も。県北はジャンルの幅が自慢です。</p>
     <div class="genre-grid">
@@ -361,6 +389,7 @@
   </section>
 
   <footer>
+<p>広告について:本サイトにはアフィリエイト広告を含むセクションがあります(「広告・PR」と表示しています)。ランキングの順位・評価は広告と関係なく、食べログ等の公開データに基づきます。</p>
     <p>「茨城県北ラーメンランキング」最終更新：2026年10月28日。対象エリア：茨城県 日立市・高萩市・北茨城市・常陸太田市・常陸大宮市。</p>
     <p>データ出典（2026年10月28日確認）：食べログ各店舗ページ／Google Maps各店舗情報／各店公式サイト・公式SNS。写真出典：全13店の写真は、地域情報サイト「いばナビ」、訪問者ブログ、食べログ口コミ、Google掲載写真など、各店の実写が確認できたものを使用しています（越智の肉玉そばは系列店を含む越智の看板メニューの実写）。</p>
     <ul>
