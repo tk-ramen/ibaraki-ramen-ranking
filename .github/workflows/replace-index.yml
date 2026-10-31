@@ -1,0 +1,20 @@
+name: Replace index-affiliate-live with index
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace index.html
+        run: |
+          git config user.name "tk-ramen"
+          git config user.email "tk-ramen@users.noreply.github.com"
+          git rm index.html
+          git mv index-affiliate-live.html index.html
+          ls -lh index.html
+          git status --short
+          git commit -m "Add vending machine FAQ and refresh update date"
+          git push
