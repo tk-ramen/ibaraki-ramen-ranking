@@ -68,7 +68,6 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "高萩市で深夜や定休日にラーメンを買える場所はありますか？", "acceptedAnswer": { "@type": "Answer", "text": "元祖肉玉そば越智高萩店（高萩市肥前町1-15）の店頭には冷凍自販機があり、営業時間外や定休日（月曜・火曜）でも24時間、冷凍の元祖肉玉そばと謹製旨味肉汁餃子（各1,000円）を買えます。自宅で調理して店の味を楽しめます。" } },
     { "@type": "Question", "name": "茨城県北で一番おすすめのラーメン店はどこですか？", "acceptedAnswer": { "@type": "Answer", "text": "このランキングでは、高萩市の「元祖肉玉そば越智高萩店」を1位に選んでいます。鶏・豚・牛の三獣スープに甘辛い豚バラ焼肉と濃厚な卵黄をのせた肉玉そばは「日本一ご飯が進むラーメン」が看板で、県北でも唯一無二の個性です。2026年2月オープンの新店で、月・火定休、住所は高萩市肥前町1-15です。" } },
     { "@type": "Question", "name": "食べログで茨城県北最高スコアのラーメン店はどこですか？", "acceptedAnswer": { "@type": "Answer", "text": "高萩市の「ら麺 はちに」で、スコア3.43・口コミ156件（2026年10月28日確認）と、県北ではスコア・口コミ数ともトップです。たつご味噌を使った「みそ火山ラーメン」が看板メニューで、Google Mapsでも口コミ658件・評価4.1と支持を集めています。" } },
     { "@type": "Question", "name": "Google評価が一番高い茨城県北のラーメン店はどこですか？", "acceptedAnswer": { "@type": "Answer", "text": "常陸太田市のつけ麺専門店「白ひげ」で、評価4.3・口コミ306件（2026年10月28日確認）が県北トップです。次いで高萩市の二郎系「麺屋 むすぶ」が評価4.2となっています。" } },
@@ -197,15 +196,7 @@
   .qa h3{margin:0 0 4px;font-size:16px}
   .qa h3::before{content:"Q. ";color:var(--red);font-weight:900}
   .qa p{margin:0;color:var(--ink2);font-size:14.5px}
-  /* affiliate (prep) */
-.pr-badge{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#8a8f98;border-radius:4px;padding:2px 7px;vertical-align:middle;margin-left:8px;letter-spacing:.05em}
-.aff-grid{display:grid;gap:14px;margin-top:12px}
-@media(min-width:640px){.aff-grid{grid-template-columns:1fr 1fr}}
-.aff-slot{border:1.5px dashed #c9cdd4;border-radius:10px;padding:16px;background:#fafbfc}
-.aff-slot h3{margin:0 0 6px;font-size:15px}
-.aff-slot p{margin:0;font-size:13px;color:var(--ink2)}
-.aff-note{font-size:12px;color:var(--ink3);margin-top:10px}
-footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--ink3)}
+  footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--ink3)}
   footer ul{padding-left:1.2em}
   @media (max-width:560px){
     .card{grid-template-columns:64px 1fr}
@@ -272,55 +263,8 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-si
   <main class="list" id="list"><!-- JSで描画 --></main>
   <div class="empty hidden" id="empty">このエリアの店舗はありません。</div>
 
-  <section class="block" id="quick">
-    <h2>茨城県北ラーメンランキング 早見表</h2>
-    <p>全13店の順位・エリア・食べログスコア・Google評価を一覧で比較できます（評価は2026年10月28日確認）。店名をタップすると食べログの店舗ページが開きます。</p>
-    <div class="qwrap">
-      <table class="quick">
-        <thead><tr><th>順位</th><th>店名</th><th>エリア</th><th>食べログ</th><th>Google</th></tr></thead>
-        <tbody>
-          <tr class="first"><td class="rk">1位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8030638/" target="_blank" rel="noopener">元祖 肉玉そば越智 高萩店</a></td><td>高萩市</td><td>3.06 <span class="sm">（11件）</span></td><td>★4.0 <span class="sm">（53件）</span></td></tr>
-          <tr><td class="rk">2位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8013329/" target="_blank" rel="noopener">ら麺 はちに</a></td><td>高萩市</td><td>3.43 <span class="sm">（156件）</span></td><td>★4.1 <span class="sm">（658件）</span></td></tr>
-          <tr><td class="rk">3位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8023972/" target="_blank" rel="noopener">麺屋 まるみつ</a></td><td>北茨城市</td><td>3.33 <span class="sm">（45件）</span></td><td>★4.1 <span class="sm">（99件）</span></td></tr>
-          <tr><td class="rk">4位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8022307/" target="_blank" rel="noopener">らぁ麺屋 まるわ</a></td><td>日立市</td><td>3.32 <span class="sm">（63件）</span></td><td>★4.1 <span class="sm">（383件）</span></td></tr>
-          <tr><td class="rk">5位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080503/8002005/" target="_blank" rel="noopener">塩子屋食堂</a></td><td>常陸大宮市</td><td>3.32 <span class="sm">（50件）</span></td><td>★4.1 <span class="sm">（249件）</span></td></tr>
-          <tr><td class="rk">6位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8001942/" target="_blank" rel="noopener">ラーメン利尻</a></td><td>北茨城市</td><td>3.20 <span class="sm">（72件）</span></td><td>★4.1 <span class="sm">（494件）</span></td></tr>
-          <tr><td class="rk">7位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8000302/" target="_blank" rel="noopener">うまい めんくい亭</a></td><td>日立市</td><td>3.18 <span class="sm">（39件）</span></td><td>★3.7 <span class="sm">（452件）</span></td></tr>
-          <tr><td class="rk">8位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080502/8011881/" target="_blank" rel="noopener">白ひげ</a></td><td>常陸太田市</td><td>3.16 <span class="sm">（51件）</span></td><td>★4.3 <span class="sm">（306件）</span></td></tr>
-          <tr><td class="rk">9位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8028004/" target="_blank" rel="noopener">麺屋 むすぶ</a></td><td>高萩市</td><td>3.12 <span class="sm">（23件）</span></td><td>★4.2 <span class="sm">（141件）</span></td></tr>
-          <tr><td class="rk">10位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080502/8002757/" target="_blank" rel="noopener">ラーメン家 ようちゃん</a></td><td>常陸太田市</td><td>3.09 <span class="sm">（24件）</span></td><td>★4.0 <span class="sm">（293件）</span></td></tr>
-          <tr><td class="rk">11位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8000279/" target="_blank" rel="noopener">麺家 ふくふく 日立店</a></td><td>日立市</td><td>3.07 <span class="sm">（16件）</span></td><td>★3.6 <span class="sm">（102件）</span></td></tr>
-          <tr><td class="rk">12位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8025806/" target="_blank" rel="noopener">じぇんとる麺</a></td><td>日立市</td><td>3.06 <span class="sm">（17件）</span></td><td>★3.3 <span class="sm">（220件）</span></td></tr>
-          <tr><td class="rk">13位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080503/8003891/" target="_blank" rel="noopener">赤い紙風船</a></td><td>常陸大宮市</td><td>3.04 <span class="sm">（11件）</span></td><td>★3.6 <span class="sm">（82件）</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
 
-  <section class="block" id="ouchi">
-<h2>おうちで味わう有名店の一杯<span class="pr-badge">広告・PR</span></h2>
-<p>県北まで足を運べない日は、お取り寄せの冷凍ラーメンという選択肢も。有名店の味を自宅で楽しめるサービスを紹介します。</p>
-<div class="aff-grid">
-<!-- AFFILIATE SLOT A: A8.net takumen ad code replaces inner content of aff-slot-a -->
-<div class="aff-slot" id="aff-slot-a" style="text-align:center">
-<h3 style="text-align:left">宅麺.com</h3>
-<p style="text-align:left;margin-bottom:10px">全国の行列店のラーメン・つけ麺を、そのまま冷凍でお取り寄せできます。</p>
-<a href="https://px.a8.net/svt/ejp?a8mat=4BESU8+DYHVCI+2CYM+5YZ75" rel="nofollow">
-<img border="0" width="120" height="60" alt="" src="https://www28.a8.net/svt/bgt?aid=261031040844&wid=001&eno=01&mid=s00000011011001003000&mc=1"></a>
-<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4BESU8+DYHVCI+2CYM+5YZ75" alt="">
-</div>
-<!-- AFFILIATE SLOT B: moshimo kantan-link code replaces inner content of aff-slot-b -->
-<div class="aff-slot" id="aff-slot-b" style="text-align:center">
-<h3 style="text-align:left">楽天市場</h3>
-<p style="text-align:left;margin-bottom:10px">冷凍ラーメンや餃子のお取り寄せは楽天市場でも探せます。</p>
-<a href="https://rpx.a8.net/svt/ejp?a8mat=4BESU6+41V7ZM+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26103176643_4BESU6_41V7ZM_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow">
-<img src="http://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/" border="0"></a>
-<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BESU6+41V7ZM+2HOM+656YP" alt="">
-</div>
-</div>
-<p class="aff-note">※このセクションはアフィリエイト広告です。リンク先で商品を購入されると、サイト運営者に紹介料が支払われる場合があります(購入される方の負担は増えません)。</p>
-</section>
-<section class="block" id="genre">
+  <section class="block" id="genre">
     <h2>ジャンルで選ぶ県北の一杯</h2>
     <p>順位とは別に、「今日はこの味」という選び方も。県北はジャンルの幅が自慢です。</p>
     <div class="genre-grid">
@@ -377,10 +321,6 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-si
       <h3>元祖肉玉そば越智高萩店の営業時間と定休日を教えてください。</h3>
       <p>営業時間は水〜日曜の11:00〜15:00と17:00〜22:00、定休日は月曜・火曜です。住所は茨城県高萩市肥前町1-15で、高萩駅から歩いて行ける立地です。看板の肉玉そばは1,150円（ライス小付き）です。</p>
     </div>
-    <div class="qa">
-      <h3>高萩市で深夜や定休日にラーメンを買える場所はありますか？</h3>
-      <p>「元祖肉玉そば越智高萩店」（高萩市肥前町1-15）の店頭には冷凍自販機があり、営業時間外や定休日（月曜・火曜）でも24時間、冷凍の元祖肉玉そばと謹製旨味肉汁餃子（各1,000円）を買えます。自宅で調理して、店の味をそのまま楽しめます。</p>
-    </div>
   </section>
 
   <section class="block" id="method">
@@ -396,9 +336,32 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;font-si
     </div>
   </section>
 
+  <section class="block" id="quick">
+    <h2>茨城県北ラーメンランキング 早見表</h2>
+    <p>全13店の順位・エリア・食べログスコア・Google評価を一覧で比較できます（評価は2026年10月28日確認）。店名をタップすると食べログの店舗ページが開きます。</p>
+    <div class="qwrap">
+      <table class="quick">
+        <thead><tr><th>順位</th><th>店名</th><th>エリア</th><th>食べログ</th><th>Google</th></tr></thead>
+        <tbody>
+          <tr class="first"><td class="rk">1位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8030638/" target="_blank" rel="noopener">元祖 肉玉そば越智 高萩店</a></td><td>高萩市</td><td>3.06 <span class="sm">（11件）</span></td><td>★4.0 <span class="sm">（53件）</span></td></tr>
+          <tr><td class="rk">2位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8013329/" target="_blank" rel="noopener">ら麺 はちに</a></td><td>高萩市</td><td>3.43 <span class="sm">（156件）</span></td><td>★4.1 <span class="sm">（658件）</span></td></tr>
+          <tr><td class="rk">3位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8023972/" target="_blank" rel="noopener">麺屋 まるみつ</a></td><td>北茨城市</td><td>3.33 <span class="sm">（45件）</span></td><td>★4.1 <span class="sm">（99件）</span></td></tr>
+          <tr><td class="rk">4位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8022307/" target="_blank" rel="noopener">らぁ麺屋 まるわ</a></td><td>日立市</td><td>3.32 <span class="sm">（63件）</span></td><td>★4.1 <span class="sm">（383件）</span></td></tr>
+          <tr><td class="rk">5位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080503/8002005/" target="_blank" rel="noopener">塩子屋食堂</a></td><td>常陸大宮市</td><td>3.32 <span class="sm">（50件）</span></td><td>★4.1 <span class="sm">（249件）</span></td></tr>
+          <tr><td class="rk">6位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8001942/" target="_blank" rel="noopener">ラーメン利尻</a></td><td>北茨城市</td><td>3.20 <span class="sm">（72件）</span></td><td>★4.1 <span class="sm">（494件）</span></td></tr>
+          <tr><td class="rk">7位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8000302/" target="_blank" rel="noopener">うまい めんくい亭</a></td><td>日立市</td><td>3.18 <span class="sm">（39件）</span></td><td>★3.7 <span class="sm">（452件）</span></td></tr>
+          <tr><td class="rk">8位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080502/8011881/" target="_blank" rel="noopener">白ひげ</a></td><td>常陸太田市</td><td>3.16 <span class="sm">（51件）</span></td><td>★4.3 <span class="sm">（306件）</span></td></tr>
+          <tr><td class="rk">9位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8028004/" target="_blank" rel="noopener">麺屋 むすぶ</a></td><td>高萩市</td><td>3.12 <span class="sm">（23件）</span></td><td>★4.2 <span class="sm">（141件）</span></td></tr>
+          <tr><td class="rk">10位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080502/8002757/" target="_blank" rel="noopener">ラーメン家 ようちゃん</a></td><td>常陸太田市</td><td>3.09 <span class="sm">（24件）</span></td><td>★4.0 <span class="sm">（293件）</span></td></tr>
+          <tr><td class="rk">11位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8000279/" target="_blank" rel="noopener">麺家 ふくふく 日立店</a></td><td>日立市</td><td>3.07 <span class="sm">（16件）</span></td><td>★3.6 <span class="sm">（102件）</span></td></tr>
+          <tr><td class="rk">12位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080501/8025806/" target="_blank" rel="noopener">じぇんとる麺</a></td><td>日立市</td><td>3.06 <span class="sm">（17件）</span></td><td>★3.3 <span class="sm">（220件）</span></td></tr>
+          <tr><td class="rk">13位</td><td><a href="https://tabelog.com/ibaraki/A0805/A080503/8003891/" target="_blank" rel="noopener">赤い紙風船</a></td><td>常陸大宮市</td><td>3.04 <span class="sm">（11件）</span></td><td>★3.6 <span class="sm">（82件）</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
   <footer>
-<p>広告について:本サイトにはアフィリエイト広告を含むセクションがあります(「広告・PR」と表示しています)。ランキングの順位・評価は広告と関係なく、食べログ等の公開データに基づきます。</p>
-    <p>「茨城県北ラーメンランキング」最終更新：2026年10月31日。対象エリア：茨城県 日立市・高萩市・北茨城市・常陸太田市・常陸大宮市。</p>
+    <p>「茨城県北ラーメンランキング」最終更新：2026年10月28日。対象エリア：茨城県 日立市・高萩市・北茨城市・常陸太田市・常陸大宮市。</p>
     <p>データ出典（2026年10月28日確認）：食べログ各店舗ページ／Google Maps各店舗情報／各店公式サイト・公式SNS。写真出典：全13店の写真は、地域情報サイト「いばナビ」、訪問者ブログ、食べログ口コミ、Google掲載写真など、各店の実写が確認できたものを使用しています（越智の肉玉そばは系列店を含む越智の看板メニューの実写）。</p>
     <ul>
       <li>常陸太田市の「Youchan」は、食べログ登録名「ラーメン家 ようちゃん」として掲載しています（同市内に実在する店舗名で確認）。</li>
@@ -520,6 +483,5 @@ document.querySelectorAll('.sortbtn').forEach(function(btn){
 });
 render();
 </script>
-<footer style="border-top:1px solid #e5ddd0;margin-top:36px;padding:20px 16px;text-align:center;color:#777;font-size:.85rem">姉妹サイト：<a href="https://tk-ramen.github.io/ibaraki-ramen-30/">茨城県ラーメンランキング30選</a>／<a href="https://tk-ramen.github.io/chiba-usedcar-ranking/">千葉県中古車販売店ランキング</a>／<a href="https://tk-ramen.github.io/chiba-beauty-clinic-ranking/">千葉県 美容クリニックランキング</a>／<a href="https://tk-ramen.github.io/tokyo-beauty-clinic-ranking/">東京都 美容クリニックランキング</a></footer>
 </body>
 </html>
